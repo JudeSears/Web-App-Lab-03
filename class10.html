@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JBU Store</title>
+		
+		<link rel="stylesheet" href="C:\Users\judem\Documents\css\myStyles.css" />
+		<script type="text/javascript" src="C:\Users\judem\Documents\js\myJs.js"></script>
+
+		<script>
+			function popupfunction(x)
+			{
+			document.getElementById('popup' + x).style.display='block';
+			document.getElementById('fade').style.display='block';
+			}
+			
+			function popupclose(x)
+			{
+			document.getElementById('popup' + x).style.display='none';
+			document.getElementById('fade').style.display='none';
+			}
+		</script>
+		
+		<style>
+			ul
+			{
+				font-family: Arial;
+				list-style-type: none;
+				background-color: #c5c5c5;
+				height: 46px;
+				overflow: hidden;
+			}
+			li
+			{
+				float: left;
+			}
+			li a, .drp
+			{
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+			}
+            li .menu-item
+			{
+				display: inline-block;
+			}
+			.menu-content
+			{
+				display: none;
+				position: absolute;
+				background-color: #f8f8f8;
+				z-index: 1;
+			}
+			.menu-content a
+            {
+				font-family: Arial;
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			.menu-item:hover .menu-content
+			{
+				display: block;
+			}
+			h1
+            {
+				color: blue;
+				font-family: Arial;
+			}
+			.white_content
+			{
+				position: absolute;
+				top: 50px;
+				left: 14%;
+				width: 1080px;
+				height: 600px;
+				background-color: #FFF;
+				display: none;
+				z-index: 1000;
+			}
+			.black_content
+			{
+				display: none;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: .70;
+				z-index: 1;
+			}
+		</style>
+	</head>
+
+	<body bgcolor="#fff">
+		<center>
+			<h1>JBU Online Store</h1>
+			
+			<ul>
+				<li class="menu-item"><a href="#" class="drp">Books</a>
+					<div class="menu-content">
+						<a  href="add_book.php" bgcolor="#fa07c9">Add Book</a><br>
+						<a  href="remove_book.php">Remove Book</a><br>
+						<a href="display_books.php">Display all Books</a><br>
+					</div>
+				</li>
+				
+				<li class="menu-item"><a href="#" class="drp">Users</a>	
+					<div class="menu-content">
+						<a href="add_user.php">Add User</a><br>
+						<a href="remove_user.php">Remove User</a><br>
+						<a href="display_users.php">Display all Users</a><br>
+					</div>
+				</li>
+
+				<li class="menu-item"><a href="#" class="drp"><img src="myCart.jpg" alt="Cart Image" width="50px" height="50px"></a>
+					<div class="menu-content">
+						
+					</div>
+				</li>
+			</ul>
+
+			<p>Welcome to JBU's Online store - open for faculty/staff and students!<p>
+
+			<br>
+			<table>
+				<tr>
+					<td><a href="javascript:void(0)" onclick="popupfunction('1')" class="link">DELL XPS 13<img src="dellXPS13.avif" alt="DELL XPS 13" width="300px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+					<td><a href="javascript:void(0)" onclick="popupfunction('2')" class="link">HP Elitebook<img src="HPelitebook.jpg" alt="HP Elitebook" width="300px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+					<td><a href="javascript:void(0)" onclick="popupfunction('3')" class="link">HP Chromebook<img src="HPchromebook.jpg" alt="HP Chromebook" width="250px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td><a href="javascript:void(0)" onclick="popupfunction('4')" class="link">DELL Inspiron<img src="DELLinspiron.avif" alt="DELL Inspiron" width="300px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+					<td><a href="javascript:void(0)" onclick="popupfunction('5')" class="link">ACER Chromebook<img src="ACERchromebook.webp" alt="ACER Chromebook" width="250px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+					<td><a href="javascript:void(0)" onclick="popupfunction('6')" class="link">Lenovo Ideapad<img src="LENOVOideapad.webp" alt="Lenovo Ideapad" width="250px" height="220px"></a><button style="width:100px;height:20px">Add to Cart</button></td>
+				</tr>
+			</table>
+
+			<div id="popup1" class="white_content">
+				<p><br><br>
+				<img src="dellXPS13.avif" width=30% /><br>jbulogo<br><br>Price:$800<br>Rating: 4<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('1')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="popup2" class="white_content">
+				<p><br><br>
+				<img src="HPelitebook.jpg" width=30% /><br>jbulogo<br><br>Price:$1500<br>Rating: 4<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('2')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="popup3" class="white_content">
+				<p><br><br>
+				<img src="HPchromebook.jpg" width=30% /><br>jbulogo<br><br>Price:$300<br>Rating: 5<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="popup4" class="white_content">
+				<p><br><br>
+				<img src="DELLinspiron.avif" width=30% /><br>jbulogo<br><br>Price:$600<br>Rating: 4.5<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('4')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="popup5" class="white_content">
+				<p><br><br>
+				<img src="ACERchromebook.webp" width=30% /><br>jbulogo<br><br>Price:$300<br>Rating: 4.5<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('5')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="popup6" class="white_content">
+				<p><br><br>
+				<img src="LENOVOideapad.webp" width=30% /><br>jbulogo<br><br>Price:$500<br>Rating: 4.5<br>
+				<a href = "javascript:void(0)" onclick = "popupclose('6')" class=linktext>close window</a>
+				</p>
+			</div>
+			<div id="fade" class="black_content"></div>
+
+		</center>
+	</body>
+</html>
